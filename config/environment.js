@@ -19,6 +19,16 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    //'default-src': "'none'",
+    //'script-src': "'self' 'unsafe-eval' 166.111.82.70:35729", // Allow scripts from http://166.111.82.70
+    'font-src': "'self' data: http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+    //'connect-src': "'self' ws://166.111.82.70:35729 https://api.mixpanel.com http://custom-api.local", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+    'img-src': "'self' data:"
+    // 'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    //'media-src': "'self'"
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
