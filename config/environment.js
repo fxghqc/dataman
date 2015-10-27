@@ -21,11 +21,11 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     //'default-src': "'none'",
-    //'script-src': "'self' 'unsafe-eval' 166.111.82.70:35729", // Allow scripts from http://166.111.82.70
+    'script-src': "'self' 'unsafe-eval' localhost:49152 0.0.0.0:49152 101.5.128.232:49152", // Allow scripts from http://166.111.82.70
     'font-src': "'self' data: http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-    //'connect-src': "'self' ws://166.111.82.70:35729 https://api.mixpanel.com http://custom-api.local", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
-    'img-src': "'self' data:"
-    // 'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    'connect-src': "'self' ws://localhost:49152 ws://0.0.0.0:49152 http://0.0.0.0:4200/csp-report ws://101.5.128.232:49152 http://101.5.128.232:4200/csp-report https://api.mixpanel.com http://custom-api.local", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+    'img-src': "'self' data:",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
     //'media-src': "'self'"
   };
 
