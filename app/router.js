@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('dashboard', { path: '/dashboard' });
+  this.route('models-config', { path: '/models' });
 });
 
 export default Router;
