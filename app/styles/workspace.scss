@@ -1,3 +1,8 @@
 .workspace {
   margin-left: 240px;
 }
+@media only screen and (max-width: 992px) {
+  .workspace {
+    margin-left: 0;
+  }
+}
